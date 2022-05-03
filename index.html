@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const parantId = document.getElementById("parentI");
+      const childId = document.getElementById("childId");
+
+      const parentCall = () => {
+        alert("parent call");
+      };
+
+      const childCall = () => {
+        alert("child call");
+        event.stopPropagation();
+      };
+     // by default it is in bubling phase
+     // by default it have third parameter false
+      parantId.addEventListener("click", parentCall);
+      childId.addEventListener("click", childCall);
+
+      //we can turn it into capturing phase
+       parantId.addEventListener("click", parentCall,true);
+      childId.addEventListener("click", childCall,true);
+    </script>
+  </body>
+</html>

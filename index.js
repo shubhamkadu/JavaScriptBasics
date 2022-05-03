@@ -567,3 +567,97 @@
 // // only one level is flattened
 // arr1.flatMap(x => [[x * 2]]);
 // // [[2], [4], [6], [8]]
+
+// const ob1 = { myname: 'shubham', age: 23 }
+// console.log(Object.values(ob1)) //[ 'shubham', 23 ]
+// const newobj=Object.entries(ob1);
+// console.log(newobj)//[ [ 'myname', 'shubham' ], [ 'age', 23 ] ]
+// console.log(Object.fromEntries(newobj))//{ myname: 'shubham', age: 23 }
+
+//ES2020
+
+// let oldnum = Number.MAX_SAFE_INTEGER
+// console.log(oldnum) //9007199254740991
+// console.log(9007199254740991n + 12n); //9007199254741003n
+// const newNum = 9007199254740991n + 12n
+// console.log(newNum) //9007199254741003n
+// console.log(typeof(newNum))//bigint
+
+// const nullish = null  ?? 'shubham'
+// const newnullish = undefined ?? "shubham";
+
+// console.log(nullish) //shubham
+// console.log(newnullish) //shubham
+
+// const nullish1 = 'toshant' ?? "shubham";
+// console.log(nullish1) //toshant
+
+//Advance javascript
+
+//event propagation
+
+// the event propagation mode determines
+// in which order the elements receive the event
+
+// event bubbling and capturing are two ways of event
+// propagation in the HTML DOM API when an event occurs
+//in an element inside another element and both element
+// have registered a handle for that event.
+// the event propagation mode determines in which order the elements receive the event
+
+// event bubbling
+// event bubbling, the event is first captured and
+// handle by thr innermost element and then propagated
+//to outer element
+
+// event capturing
+// event capturing the event is first captured by the outermost element and propagated to the inner element
+// capturing is also called 'trickling' which helps remember the propagation  order;
+
+//Hoisting in javascript
+
+// we have a creation phase and execution phase
+
+// Hoisting in js is a mechanism where varialble and function
+// declaration are moved to the top of their scopes before the code execute
+
+// console.log(myname)
+// var myname
+// myname='shubham'
+
+// //hoisting mechanism
+// var myname;
+// console.log(myname);
+// myname = "shubham";
+
+// Scope chain and lexical Scoping in javascript
+
+// the scope chain is used to resolve the values of variable names
+
+// scope chain is lexically defined, which means that we can
+// see what the scope chain will be by looking at the code
+
+// lexical Scoping means now, the child function can access to thair parent function variables but the vice-versa is not true
+
+// let a='hello guys'
+
+// const first = ()=>{
+//   let b = "how are you";
+//   const second = () => {
+//     let c = "hii, im fine thank you";
+//     console.log(a + b + c);
+//   };
+//   second();
+// //   console.log(a + b + c); // i can't use c, ReferenceError: c is not defined
+// }
+
+// first()
+
+// closures in javascript
+
+// a closure is the combination of a function bundled together (enclosed) with references
+// to its surrounding state ( the lexical environment)
+
+// in other word, a closure gives you access to an outer function scopes from an inner function
+
+// in javascirpt, closure are created every time a function is created, at function creation time
