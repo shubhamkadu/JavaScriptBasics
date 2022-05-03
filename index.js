@@ -661,3 +661,39 @@
 // in other word, a closure gives you access to an outer function scopes from an inner function
 
 // in javascirpt, closure are created every time a function is created, at function creation time
+
+// closure in js
+// when we have a function defined inside of another function
+// the inner fucntion have access to the variable and scope of outer
+// function  even if the outer function finishes the executing
+// and those variable no longer accessible outside that function
+
+// function outerFunction(outerVariable) {
+//   const outer = "hi";
+//   return function innerFunction(innerVariable) {
+//     console.log("outer variable" + outerVariable);
+//     console.log("Inner Variable" + innerVariable);
+//     console.log(outer);
+//   };
+// }
+
+// const newFunction = outerFunction("outsiders");
+// newFunction("inner");
+
+// try this with console
+// console.log(outerFunction("outsiders"))
+
+
+// use strick mode
+
+// x='shubham'
+// console.log(x) //shubham
+
+// "use strict"
+
+// x = "shubham";
+// console.log(x); //ReferenceError: x is not defined
+
+
+// synchronous programming=> sequential
+//Asynchronous programming=> unsequential
